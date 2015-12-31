@@ -1,12 +1,10 @@
 var app = angular.module('myApp', [ ]);
 
-app.controller('RaffleCtrl', function(){
-  this.entries = persons;
-  
-});
+app.controller('EntryController', function(){
+  this.entries = [ ];
 
-var persons = [
-  {name:'Larry'},
-  {name:'Curly'},
-  {name:'Moe'}
-];
+  this.addEntry = function(){
+    this.entries.push(this.entry);
+    this.entry = { };
+  };
+});

@@ -1,14 +1,14 @@
 <h1>Raffler</h1>
 
-<div ng-controller="RaffleCtrl as raffle">
-  <form ng-submit="raffleCtrl.addEntry(person)">
-    <input type="text" ng-model="newEntry.name">
+<div ng-controller="EntryController as entryCtrl">
+  <form ng-submit="entryCtrl.addEntry(name)">
+    <input type="text" ng-model="entryCtrl.entry.name">
     <input type="submit" value="Add">
   </form>
+  {{entryCtrl.entry.name}}
   <ul>
-    <li ng-repeat="entry in raffle.entries">
+    <li ng-repeat="entry in entryCtrl.entries">
       {{entry.name}}
     </li>
-      {{newEntry.name}}
   </ul>
 </div>
